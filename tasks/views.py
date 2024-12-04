@@ -8,6 +8,8 @@ def task_list(request):
     tasks = Task.objects.filter(user=request.user)
     return render(request, 'tasks/task_list.html', {'tasks': tasks})
 
+def task_detail(request, pk):
+
 @login_required
 def create_task(request):
     if request.method == 'POST':
@@ -19,7 +21,7 @@ def create_task(request):
             return redirect('task_list')
 
     else: 
-        form = taskForm()
+        form = TaskForm()
     return render(request, 'tasks/task_form.html', {'form': form})
 
 
