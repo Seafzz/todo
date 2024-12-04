@@ -29,3 +29,4 @@ def delte_task(request, pk):
     if request.method == 'POST':
         task.delete()
         return redirect('task_list')
+    return render(request, 'tasks/task_confirm_delete.html', {'task': task})
