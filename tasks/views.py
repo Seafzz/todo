@@ -25,3 +25,8 @@ def create_task(request):
 
 @login_required
 def delte_task(request, pk):
+    task = Task.objects.get(pk=pk, user=request.user)
+    if request.method == 'POST':
+        task.delte()
+        return redirect('task_list')
+        
