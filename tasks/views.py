@@ -47,4 +47,9 @@ def delete_task(request, pk):
     return render(request, 'tasks/task_confirm_delete.html', {'task': task})
 
 def signup(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            
 
