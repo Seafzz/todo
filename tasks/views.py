@@ -26,7 +26,12 @@ def create_task(request):
 @login_required
 
 def edit_task(request, pk):
-    
+    task = Task.objects.get(pk=pk, user=request.user)
+    if request.method == 'POST':
+        form = TaskForm(request.POST, instance=task)
+        if form.is_valid():
+            form.save()
+        return redirect ('task_list')
 
 
 @login_required
