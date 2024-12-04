@@ -5,4 +5,5 @@ from .models import Task
 
 @login_required
 def task_list(request):
-    
+    tasks = Task.objects.filter(user=request.user)
+    return render(request, 'tasks/task_list.html', {'tasks': tasks})
