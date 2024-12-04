@@ -46,3 +46,5 @@ def delete_task(request, pk):
         return redirect('task_list')
     return render(request, 'tasks/task_confirm_delete.html', {'task': task})
 
+def signup(request):
+
