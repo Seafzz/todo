@@ -10,4 +10,5 @@ def task_list(request):
 
 @login_required
 def create_task(request):
-    
+    if request.method == 'POST':
+        form = TaskForm(request.POST)
