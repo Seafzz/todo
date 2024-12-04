@@ -27,6 +27,5 @@ def create_task(request):
 def delte_task(request, pk):
     task = Task.objects.get(pk=pk, user=request.user)
     if request.method == 'POST':
-        task.delte()
+        task.delete()
         return redirect('task_list')
-        
