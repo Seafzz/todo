@@ -56,4 +56,7 @@ def signup(request):
             user = authenticate(username=username, password=password)
             login(request, user)
             return redirect('task_list')
+    else:
+        form = UserCreationForm()
+    return render(request, 'registration/signup.html', {'form': form})
 
