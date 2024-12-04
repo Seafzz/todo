@@ -10,7 +10,8 @@
     <li class="list-group-item">
         <a href="{% url 'edit_task' task.pk %}">{{ task.title }}</a>
         <form action="{% url 'delete_task' task.pk %}" method="post" style="display:inline;">
-                
+                {% csrf_token %}
+            
 
         </form>
 
