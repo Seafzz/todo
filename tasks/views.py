@@ -17,3 +17,7 @@ def create_task(request):
             task.user = request.user
             task.save()
             return redirect('task_list')
+
+    else: 
+        form = taskForm()
+    return render(request, 'tasks/task_form.html', {'form': form})
