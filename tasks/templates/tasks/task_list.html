@@ -3,15 +3,14 @@
 {% block title %}My Tasks{% endblock %}
 
 {% block content %}
-
 <h1>My Tasks</h1>
 <ul class="list-group">
     {% for task in tasks %}
     <li class="list-group-item">
         <a href="{% url 'edit_task' task.pk %}">{{ task.title }}</a>
         <form action="{% url 'delete_task' task.pk %}" method="post" style="display:inline;">
-                {% csrf_token %}
-                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
         </form>
     </li>
     {% endfor %}
