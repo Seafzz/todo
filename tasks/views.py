@@ -32,6 +32,9 @@ def edit_task(request, pk):
         if form.is_valid():
             form.save()
         return redirect ('task_list')
+    else:
+        form = TaskForm(instance=task)
+    return render(request, 'tasks/task_form.html', {'form: form'})
 
 
 @login_required
