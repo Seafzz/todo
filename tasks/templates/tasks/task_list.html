@@ -5,10 +5,15 @@
 {% block content %}
 
 <h1>My Tasks</h1>
-<ul>
+<ul class="list-group">
     {% for task in tasks %}
-    <li class="list-group">
-        
+    <li class="list-group-item">
+        <a href="{% url 'edit_task' task.pk %}">{{ task.title }}</a>
+        <form action="{% url 'delete_task' task.pk %}" method="post" style="display:inline;">
+                
+
+        </form>
+
     </li>
 
 
