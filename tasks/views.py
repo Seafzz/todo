@@ -21,3 +21,7 @@ def create_task(request):
     else: 
         form = taskForm()
     return render(request, 'tasks/task_form.html', {'form': form})
+
+
+@login_required
+def delte_task(request, pk):
