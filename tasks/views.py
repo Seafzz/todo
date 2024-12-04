@@ -9,6 +9,8 @@ def task_list(request):
     return render(request, 'tasks/task_list.html', {'tasks': tasks})
 
 def task_detail(request, pk):
+    tast = get_object_or_404(Task, pk=pk, user=request.user)
+    return render(request, 'tasks/task.detail.html', {'task': task})
 
 @login_required
 def create_task(request):
