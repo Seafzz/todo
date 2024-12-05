@@ -16,4 +16,6 @@ class TaskForm(forms.ModelForm):
         self.helper.add_input(Submit('submit', 'Save', css_class='btn btn-success'))
 
 class ProfileForm(forms.ModelForm):
-    
+    class Meta:
+        model = Profile
+        field = ['bio', 'location', 'birth_date']
