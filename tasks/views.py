@@ -71,6 +71,7 @@ def signup(request):
         form = UserCreationForm()
     return render(request, 'registration/signup.html', {'form': form})
 
+@login_required
 def update_profile(request):
     if request.method == 'POST':
         form = ProfileFOrm(request.POST, instance=request.user.profile)
