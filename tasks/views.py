@@ -24,6 +24,7 @@ def create_task(request):
             task = form.save(commit=False)
             task.user = request.user
             task.save()
+            message.success(request, 'Task was created successfully!')
             return redirect('task_list')
     else:
         form = TaskForm()
