@@ -18,4 +18,4 @@ class TaskForm(forms.ModelForm):
 class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
-        field = ['bio', 'location', 'birth_date']
+        fields = ['bio', 'location', 'birth_date']
