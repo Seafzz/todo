@@ -2,22 +2,10 @@
 {% block title %}Home{% endblock %}
 {% block content %} 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="{% url 'home' %}">Todo List!</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'login' %}">Log In</a>
-            </li>
-        </ul>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+<a class="navbar-brand" href="{% url 'home' %}">TodoList!</a>
 </nav>
+
 <div class="jumbotron text-center"> 
     <h1 class="display-4">Welcome to the Todo List!</h1>
      <p class="lead">Keep Track</p> 
@@ -54,13 +42,13 @@
     </div>  
     <div class="col-lg-4"> 
         <blockquote class="blockquote">
-            <p class="mb-0">This helped me finish my pp4 in time!</p>
+            <p class="mb-0">Made my planing easier giving me a quick overview</p>
             <footer class="blockquote-footer">Alex, <cite title="Source Title">Student</cite></footer>
         </blockquote>
     </div>
         <div class="col-lg-4"> 
             <blockquote class="blockquote">
-                <p class="mb-0">This helped me finish my pp4 in time!</p>
+                <p class="mb-0">easy to create and manage the tasks 9/10!</p>
                 <footer class="blockquote-footer">Alex, <cite title="Source Title">Student</cite></footer>
             </blockquote>
         </div>
