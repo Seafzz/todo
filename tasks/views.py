@@ -39,6 +39,7 @@ def edit_task(request, pk):
         form = TaskForm(request.POST, instance=task)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Task edited successfully!')
             return redirect('task_list')
     else:
         form = TaskForm(instance=task)
