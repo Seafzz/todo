@@ -16,6 +16,7 @@ def task_detail(request, pk):
     task = get_object_or_404(Task, pk=pk, user=request.user)
     return render(request, 'tasks/task_detail.html', {'task': task})
 
+
 @login_required
 def create_task(request):
     if request.method == 'POST':
@@ -24,11 +25,12 @@ def create_task(request):
             task = form.save(commit=False)
             task.user = request.user
             task.save()
-            message.success(request, 'Task was created successfully!')
+            messages.success(request, 'Task created successfully!')
             return redirect('task_list')
     else:
         form = TaskForm()
     return render(request, 'tasks/task_form.html', {'form': form})
+
 
 @login_required
 def edit_task(request, pk):
