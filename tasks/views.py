@@ -81,3 +81,7 @@ def update_profile(request):
     else:
         form = ProfileForm(instance=request.user.profile)
     return render(request, 'tasks/update_profile.html', {'form': form})
+
+@login_required
+def view_profile(request):
+    
