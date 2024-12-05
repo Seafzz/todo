@@ -2,6 +2,7 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import render
 from django.contrib import messages
 from .forms import ProfileForm
 from .forms import TaskForm
@@ -86,3 +87,7 @@ def update_profile(request):
 def view_profile(request):
     profile = request.user.profile
     return render(request, 'tasks/view_profile.html', {'profile': profile})
+
+
+def home (request):
+    return render(request, 'tasks/home.html')
