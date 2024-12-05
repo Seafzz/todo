@@ -3,7 +3,9 @@ from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from .forms import ProfileForm
 from .forms import TaskForm
+from .models import Profile
 from .models import Task
 
 @login_required
