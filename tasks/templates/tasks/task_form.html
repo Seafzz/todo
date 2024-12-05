@@ -1,16 +1,18 @@
 {% extends 'tasks/base.html' %}
-{% block title %}Create/Edit Task{% endblock %}
-{% block content %}
+{% load crispy_forms_tags %}
 
+{% block title %}Create/Edit Task{% endblock %}
+
+{% block content %}
 <div class="d-flex justify-content-center align-items-center" style="min-height: 80vh;">
-    <div class="card w-50">
+    <div class="card shadow-sm w-50">
         <div class="card-body">
             <h2 class="card-title text-center">Create/Edit Task</h2>
             <form method="post">
                 {% csrf_token %}
-                {{ form.as_p }}
+                {{ form|crispy }}
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="submit" class="btn btn-success">Save</button>
                     <a href="{% url 'task_list' %}" class="btn btn-secondary">Cancel</a>
                 </div>
             </form>
@@ -18,3 +20,6 @@
     </div>
 </div>
 {% endblock %}
+
+
+
