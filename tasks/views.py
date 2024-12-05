@@ -72,4 +72,8 @@ def signup(request):
     return render(request, 'registration/signup.html', {'form': form})
 
 def update_profile(request):
-    
+    if request.method == 'POST':
+        form = ProfileFOrm(request.POST, instance=request.user.profile)
+        if form.is_valid():
+            form.save()
+            return redirect('profile')
