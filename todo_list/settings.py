@@ -130,3 +130,5 @@ CSRF_TRUSTED_ORIGINS = [ 'https://*.gitpod.io', ]
 
 LOGIN_REDIRECT_URL ='/'
 LOGOUT_REDIRECT_URL='/accounts/login'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
