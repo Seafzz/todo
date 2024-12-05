@@ -84,4 +84,5 @@ def update_profile(request):
 
 @login_required
 def view_profile(request):
-    
+    profile = request.user.profile
+    return render(request, 'tasks/view_profile.html', {'profile': profile})
