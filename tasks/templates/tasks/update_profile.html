@@ -6,5 +6,5 @@
 <h2>Update Profile</h2>
 <from method="post">
     {% csrf_token %}
-
+    {{ form|crispy }}
 </from>
