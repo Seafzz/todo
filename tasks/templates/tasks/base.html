@@ -7,6 +7,13 @@
 </head>
 <body>
     <div class="container">
+        {% if message %}
+        <div class="alert alert-info" role="alert">
+            {% for message in message %}
+                {{ message }}
+            {% endfor %}
+        </div>
+        {% endif %}
         {% block content %}{% endblock %}
     </div>
 </body>
