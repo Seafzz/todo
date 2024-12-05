@@ -1,13 +1,11 @@
-{% extends 'tasks/base.html' %} 
-{% block title %}Delete Task{% endblock %}
+{% extends 'tasks/base.html' %}
+{% block title %}Confirm Delete{% endblock %}
 {% block content %}
 
-<h1>Delete Task</h1>
-<p> ARe you sure you want to delete "{{ task.title }}" ? </p>
-
+<h2>Are you sure you want to delete this task?</h2>
 <form method="post">
-{% csrf_token %}
-<button type="submit" class="btn btn-danger">Yes. Delete</button>
-<a href="{% url 'task_list' %}" class="btn btn-secondary">Cancel</a>
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Confirm</button>
+    <a href="{% url 'task_list' %}" class="btn btn-secondary">Cancel</a>
 </form>
 {% endblock %}
