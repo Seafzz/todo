@@ -15,3 +15,5 @@ class TaskForm(forms.ModelForm):
         self.helper.form_method = 'post'
         self.helper.add_input(Submit('submit', 'Save', css_class='btn btn-success'))
 
+class ProfileForm(forms.ModelForm):
+    
