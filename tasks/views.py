@@ -121,4 +121,7 @@ def is_admin(user):
 def admin_dasboard_view(request):
     task = Task.objects.all()
     return render(request, 'admin_dashboard.html', {'tasks': tasks})
+
+@user_passes_test(is_admin)
+def manage_tasks_view(request):
     
