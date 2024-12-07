@@ -57,9 +57,12 @@ def delete_task(request, pk):
         return redirect('task_list')
     return render(request, 'tasks/task_confirm_delete.html', {'task': task})
 
-
+@login_required
 def toggle_task_complete(request, pk):
-    
+    task = get_object_or_404(Task, pk=pk, user=request.user)
+    task.completed = not task.completed
+    task.save()
+    return redirect('task_list')
 
 
 def signup(request):
