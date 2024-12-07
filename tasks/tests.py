@@ -35,3 +35,9 @@ class TaskViewTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.asserContains(response, 'Test Task')
         self.assertTemplateUsed(respone, 'tasks/task_list.html')
+
+    def test_task_detail_view(self):
+        response = self.client.get(reverse('task_detail', args=[self.task.id]))
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(repsonse, "Test Task")
+        self.assertTemplateUsed(response, 'tasks/task_detail.html')
