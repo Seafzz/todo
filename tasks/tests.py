@@ -17,3 +17,8 @@ class TaskModelTest(TestCase):
 
     def test_string_representation(self):
         self.assert_Equal(str(self.task), self.task.title)
+
+class TaskViewTests(TestCase):
+    def setup(self):
+        self.task = Task.objects.create(title="Test Task", description="This is a test task", completed=False)
+        
