@@ -124,4 +124,7 @@ def admin_dasboard_view(request):
 
 @user_passes_test(is_admin)
 def manage_tasks_view(request):
-    
+    if request.method == 'POST':
+        pass
+    tasks = Task.objects.all()
+    return render(request, 'manage_tasks.html', {'tasks': tasks})
