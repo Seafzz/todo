@@ -26,6 +26,7 @@ class TaskViewTests(TestCase):
             title="Test Task", description="This is a test task", completed=False)
 
     def test_task_list_view(self):
+        self.client.login(username='testuser', password='testproject4')
         response = self.client.get(reverse('task_list'))
         self.assertEqual(response.status_code, 200)
         self.assert_Contains(response, "Test Task")
