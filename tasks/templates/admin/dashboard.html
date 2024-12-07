@@ -8,3 +8,7 @@
     {{ form|crispy }}
     <button type="submit">Submit</button>
 </form>
+<ul>
+    {% for task in tasks %}
+    <li> {{ task.title }} - {{ task.description }}</li>
+</ul>
