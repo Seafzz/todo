@@ -119,7 +119,7 @@ def is_admin(user):
 
 @user_passes_test(is_admin)
 def admin_dashboard_view(request):
-    tasks = Task.objects.all.count()
+    total_tasks = Task.objects.count()
     completed_tasks = Task.objects.filter(completed=True).count()
     return render(request, 'admin/dashboard.html', {
         'total_tasks': total_tasks,
