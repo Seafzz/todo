@@ -118,7 +118,7 @@ def is_admin(user):
     return user.is_authenticated and user.groups.filter(name='admin').exists()
 
 @user_passes_test(is_admin)
-def admin_dasboard_view(request):
+def admin_dashboard_view(request):
     task = Task.objects.all()
     return render(request, 'admin/dashboard.html', {'tasks': tasks})
 

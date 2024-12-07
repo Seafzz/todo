@@ -15,4 +15,8 @@ urlpatterns = [
     path('logout/', views.logout_view, name='logout'),
     path('tasks/<int:pk>/toggle_complete/',
          views.toggle_task_complete, name='toggle_task_complete'),
+
+ # Admin URLs path
+    path('admin/dashboard/', views.admin_dashboard_view, name='dashboard'), 
+    path('admin/manage_tasks/', views.manage_tasks_view, name='manage_tasks'),
 ]
