@@ -39,3 +39,17 @@ body {
     background-color: #0056b3;
     border-color:#0056b3;
 }
+
+/* Alerts */
+.alert-info {
+    background-color: #e9f7fa;
+    border-color: #bee5eb;
+    color: #0c5460;
+}
+
+/* Task List */
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
