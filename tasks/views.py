@@ -9,10 +9,12 @@ from .forms import TaskForm
 from .models import Profile
 from .models import Task
 
+
 @login_required
 def task_list(request):
     tasks = Task.objects.filter(user=request.user).order_by('due_date')
     return render(request, 'tasks/task_list.html', {'tasks': tasks})
+
 
 @login_required
 def task_detail(request, pk):
@@ -48,6 +50,7 @@ def edit_task(request, pk):
         form = TaskForm(instance=task)
     return render(request, 'tasks/task_form.html', {'form': form})
 
+
 @login_required
 def delete_task(request, pk):
     task = get_object_or_404(Task, pk=pk, user=request.user)
@@ -56,6 +59,7 @@ def delete_task(request, pk):
         messages.success(request, 'Task deleted successfully!')
         return redirect('task_list')
     return render(request, 'tasks/task_confirm_delete.html', {'task': task})
+
 
 @login_required
 def toggle_task_complete(request, pk):
@@ -79,6 +83,7 @@ def signup(request):
         form = UserCreationForm()
     return render(request, 'registration/signup.html', {'form': form})
 
+
 @login_required
 def update_profile(request):
     if request.method == 'POST':
@@ -98,7 +103,7 @@ def view_profile(request):
     return render(request, 'tasks/view_profile.html', {'profile': profile})
 
 
-def home (request):
+def home(request):
     return render(request, 'tasks/home.html')
 
 
