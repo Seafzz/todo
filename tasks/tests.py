@@ -38,14 +38,12 @@ class TaskViewTests(TestCase):
         self.client.login(username='testuser', password='testproject4')
 
     def test_task_list_view(self):
-        self.client.login(username='testuser', password='testproject4')
         response = self.client.get(reverse('task_list'))
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Test Task")
         self.assertTemplateUsed(respone, 'task/task_list.html')
 
     def test_task_detail_view(self):
-        self.client.login(username='testuser', password='testproject4')
         response = self.client.get(reverse('task_detail', args=[self.task.id]))
         self.assertEqual(response.status_code, 200)
         self.assertContains(repsonse, "Test Task")
