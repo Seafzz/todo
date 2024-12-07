@@ -52,4 +52,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 20px;
+    border: 1px solid #dee2e6;
+    
 }
