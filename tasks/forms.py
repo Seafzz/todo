@@ -7,7 +7,7 @@ from crispy_forms.layout import Submit
 class TaskForm(forms.ModelForm):
     class Meta:
         model = Task
-        fields = ['title', 'description', 'completed', 'due_date']
+        fields = ['title', 'description', 'due_date', 'priority', 'category', 'completed']
 
     def __init__(self, *args, **kwargs):
         super(TaskForm, self).__init__(*args, **kwargs)
