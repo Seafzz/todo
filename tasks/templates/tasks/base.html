@@ -15,13 +15,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'task_list' %}">Tasks</a>                    
+                    <a class="nav-link" href="{% url 'task_list' %}"><i class="fas fa-tasks"></i> Tasks</a>                    
                 </li>
                 <li class="nav-item"> 
-                    <a class="nav-link" href="{% url 'view_profile' %}">Profile</a> 
+                    <a class="nav-link" href="{% url 'view_profile' %}"><i class="fas fa-user"></i> Profile</a> 
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'create_task' %}">Create Task</a>
+                    <a class="nav-link" href="{% url 'create_task' %}"><i class="fas fa-plus-circle"></i> Create Task</a>
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
@@ -29,20 +29,20 @@
                 <li class="nav-item">
                     <form method="post" action="{% url 'logout' %}">
                         {% csrf_token %}
-                        <button type="submit" class="btn btn-link nav-link" style="display: inline; padding: 0;">Logout</button>
+                        <button type="submit" class="btn btn-link nav-link" style="display: inline; padding: 0;"><i class="fas fa-sign-out-alt"></i> Logout</button>
                     </form>
                 </li>
                 {% else %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'login' %}">Login</a>
+                    <a class="nav-link" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn btn-primary text-white ml-2" href="{% url 'signup' %}">Sign Up</a>
+                    <a class="nav-link btn btn-primary text-white ml-2" href="{% url 'signup' %}"><i class="fas fa-user-plus"></i> Sign Up</a>
                 </li>
                 {% endif %}
             </ul>
         </div>
-    </nav>
+    </nav>    
     <div class="container">
         {% if messages %}
             <div class="alert alert-info" role="alert">
