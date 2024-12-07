@@ -13,6 +13,6 @@ urlpatterns = [
     path('signup/', views.signup, name='signup'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('logout/', views.logout_view, name='logout'),
-    path('tasks/<int:pk>/toggle_complete/', views.toggle_task_complete, name='toggle_task_complete'),
+    path('tasks/<int:pk>/toggle_complete/',
+         views.toggle_task_complete, name='toggle_task_complete'),
 ]
-
