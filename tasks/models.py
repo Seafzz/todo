@@ -20,3 +20,6 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.user.username
+
+class Task(models.Model):
+    
