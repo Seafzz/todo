@@ -29,13 +29,12 @@ class TaskModelTest(TestCase):
 
 class TaskViewTests(TestCase):
     def setUp(self):
-        self.task = Task.objects.create(
-            title="Test Task", description="This is a test task", completed=False, user=self.user)
-
-        #Create user
+        # Create user 
         self.user = User.objects.create_user(username='testuser', password='testproject4')
 
-        #login user
+        self.task = Task.objects.create( title="Test Task", description="This is a test task", completed=False, user=self.user)
+
+        # Login user 
         self.client.login(username='testuser', password='testproject4')
 
     def test_task_list_view(self):
