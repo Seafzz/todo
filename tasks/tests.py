@@ -9,7 +9,7 @@ from .models import Task
 class TaskModelTest(TestCase):
     def setUp(self):
         self.task = Task.objects.create(
-            title="Test Task", description="This is a test task", completed=False)
+            title="Test Task", description="This is a test task", completed=False, user=self.user)
             
         #Create user
         self.user = user.objects.create_user(username='testuser', password='testproject4')
@@ -29,7 +29,7 @@ class TaskModelTest(TestCase):
 class TaskViewTests(TestCase):
     def setUp(self):
         self.task = Task.objects.create(
-            title="Test Task", description="This is a test task", completed=False)
+            title="Test Task", description="This is a test task", completed=False, user=self.user)
 
         #Create user
         self.user = User.objects.create_user(username='testuser', password='testproject4')
