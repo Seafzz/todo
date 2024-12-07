@@ -9,6 +9,7 @@ class TaskModelTest(TestCase):
     def setUp(self):
         self.task = Task.objects.create(
             title="Test Task", description="This is a test task", completed=False)
+        self.user = user.objects.create_user(username='testuser', password="testproject4")
 
     def tesk_task_creation(self):
         self.assertEqual(self.task.title, "Test Task")
