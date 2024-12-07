@@ -24,4 +24,3 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('signup/', task_views.signup, name='signup'),
 ]
-
