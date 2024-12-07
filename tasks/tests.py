@@ -5,7 +5,7 @@ from .models import Task
 
 # Create your tests here.
 
-
+#Model Tests
 class TaskModelTest(TestCase):
     def setUp(self):
         #create user
@@ -27,6 +27,7 @@ class TaskModelTest(TestCase):
         self.assertEqual(str(self.task), self.task.title)
 
 
+#Views Tests
 class TaskViewTests(TestCase):
     def setUp(self):
         # Create user 
@@ -48,3 +49,6 @@ class TaskViewTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Test Task")
         self.assertTemplateUsed(response, 'tasks/task_detail.html')
+
+    
+#Form Test
