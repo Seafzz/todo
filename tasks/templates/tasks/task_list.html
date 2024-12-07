@@ -7,6 +7,7 @@
     {% for task in tasks %}
     <li class="list-group-item d-flex justify-content-between align-items-center
     {% if task.priority == 'A' %} background-color: #f8d7da; /* Red for ASAP */
+    {% elif task.priority == 'M' %} background-color: #fff3cd; /* Orange for Urgent */
     
     
     ">
