@@ -27,4 +27,8 @@ class Task(models.Model):
         ('U', 'Urgent'),
         ('A', 'Asap'),
     ]
-    
+    CATEGORY_CHOICES =[
+        ('W', 'Work'),
+        ('P', 'Personal'),
+        ('O', 'Others'),
+    ]
