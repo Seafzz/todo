@@ -120,11 +120,11 @@ def is_admin(user):
 @user_passes_test(is_admin)
 def admin_dasboard_view(request):
     task = Task.objects.all()
-    return render(request, 'admin_dashboard.html', {'tasks': tasks})
+    return render(request, 'admin/dashboard.html', {'tasks': tasks})
 
 @user_passes_test(is_admin)
 def manage_tasks_view(request):
     if request.method == 'POST':
         pass
     tasks = Task.objects.all()
-    return render(request, 'manage_tasks.html', {'tasks': tasks})
+    return render(request, 'admin/manage_tasks.html', {'tasks': tasks})
