@@ -2,6 +2,7 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import user_passes_test
 from django.shortcuts import render
 from django.contrib import messages
 from .forms import ProfileForm
@@ -111,3 +112,8 @@ def logout_view(request):
     if request.method == 'POST':
         logout(request)
         return redirect('home')
+
+
+def is_admin(user):
+    return user.is_authenticated and user.groups.filter(name='admin').exists()
+    
