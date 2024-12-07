@@ -31,6 +31,12 @@ class TaskViewTests(TestCase):
         self.task = Task.objects.create(
             title="Test Task", description="This is a test task", completed=False)
 
+        #Create user
+        self.user = User.objects.create_user(username='testuser', password='testproject4')
+
+        #login user
+        self.client.login(username='testuser', password='testproject4')
+
     def test_task_list_view(self):
         self.client.login(username='testuser', password='testproject4')
         response = self.client.get(reverse('task_list'))
