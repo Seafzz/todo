@@ -8,16 +8,16 @@ from .models import Task
 
 class TaskModelTest(TestCase):
     def setUp(self):
-        self.task = Task.objects.create(
+        #create user
+        self.user = User.objects.create_user(username='testuser', password='testproject4')
+        
+        self.task = Task.objects.create( 
             title="Test Task", description="This is a test task", completed=False, user=self.user)
-            
-        #Create user
-        self.user = user.objects.create_user(username='testuser', password='testproject4')
 
         #login user
         self.client.login(username='testuser', password='testproject4')
 
-    def tesk_task_creation(self):
+    def test_task_creation(self):
         self.assertEqual(self.task.title, "Test Task")
         self.assertEqual(self.task.description, "This is a test task")
         self.assertFalse(self.task.completed)
@@ -41,7 +41,7 @@ class TaskViewTests(TestCase):
         response = self.client.get(reverse('task_list'))
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Test Task")
-        self.assertTemplateUsed(respone, 'task/task_list.html')
+        self.assertTemplateUsed(respone, 'tasks/task_list.html')
 
     def test_task_detail_view(self):
         response = self.client.get(reverse('task_detail', args=[self.task.id]))
