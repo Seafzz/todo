@@ -18,6 +18,7 @@ class Task(models.Model):
     description = models.TextField()
     completed = models.BooleanField(default=False)
     due_date = models.DateField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_ad=True)
 
     def __str__(self):
         return self.title
