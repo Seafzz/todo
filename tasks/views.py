@@ -78,8 +78,8 @@ def update_profile(request):
         form = ProfileForm(request.POST, instance=request.user.profile)
         if form.is_valid():
             form.save()
-            message.success(request, 'Your profile was uppdated successfully!')
-            return redirect('profile')
+            message.success(request, 'Your profile was updated successfully!')
+            return redirect('view_profile')
     else:
         form = ProfileForm(instance=request.user.profile)
     return render(request, 'tasks/update_profile.html', {'form': form})
