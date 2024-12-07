@@ -27,7 +27,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY = 'django-insecure-!4b798*#i-*7m&r37et9=7xu!d1yop$c5i)=kbhb#$h90*7-@7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['.gitpod.io', 'localhost', '127.0.0.1']
 
