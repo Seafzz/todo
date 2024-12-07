@@ -59,7 +59,18 @@ class TaskFormTest(TestCase):
         self.user = User.objects.create_user(username='testuser', password='testproject4')
 
     def test_valid_form(self):
-        data = {'title': 'Test Task', 'description': 'This is a test task', 'completed': False, 'user': self.user.id}
+        data = { 
+            'title': 'Test Task',
+            'description': 'This is a test task',
+            'completed': False, 
+            'user': self.user.id,
+            'priority': 'L',
+            'priority': 'U',
+            'priority': 'A',
+            'category': 'W', 
+            'category': 'P',
+            'category': 'O',
+        }        
         form = TaskForm(data=data)
         print(form.errors) #Debugg
         self.assertTrue(form.is_valid())
