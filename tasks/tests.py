@@ -62,4 +62,8 @@ class TaskFormTest(TestCase):
         form = TaskForm(data=data)
         self.assertTrue(form.is_valid())
 
-    
+    def test_invalid_form(self):
+        data = {'title': '', 'description': 'This is a test task'}
+        form = TaskForm(data=data)
+        self.assertFalse(form.is_valid())
+        self.assertIn('title', form.errors)
