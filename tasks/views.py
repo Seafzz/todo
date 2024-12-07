@@ -58,6 +58,10 @@ def delete_task(request, pk):
     return render(request, 'tasks/task_confirm_delete.html', {'task': task})
 
 
+def toggle_task_complete(request, pk):
+    
+
+
 def signup(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
