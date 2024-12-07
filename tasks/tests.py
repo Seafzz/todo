@@ -57,4 +57,9 @@ class TaskFormTest(TestCase):
     def setUp(self):
         self.user = User.objects.create_user(username='testuser', password='testproject4')
 
+    def test_valid_form(self):
+        data = {'title': 'Test Task', 'description': 'This is a test task', 'completed': False, 'user': self.user.id}
+        form = TaskForm(data=data)
+        self.assertTrue(form.is_valid())
+
     
