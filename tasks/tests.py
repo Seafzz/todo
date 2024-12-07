@@ -11,7 +11,7 @@ class TaskModelTest(TestCase):
 
     def tesk_task_creation(self):
         self.assertEqual(self.task.title, "Test Task")
-        self assertEqual(self.task.description, "This is a test task")
+        self.assertEqual(self.task.description, "This is a test task")
         self.assertEqual(self.task.completed)
     
     def test_string_representation(self):
