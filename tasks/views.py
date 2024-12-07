@@ -125,11 +125,3 @@ def admin_dashboard_view(request):
         'total_tasks': total_tasks,
         'completed_tasks': completed_tasks,
     })
-
-
-@user_passes_test(is_admin)
-def manage_tasks_view(request):
-    if request.method == 'POST':
-        pass
-    tasks = Task.objects.all()
-    return render(request, 'admin/manage_tasks.html', {'tasks': tasks})
