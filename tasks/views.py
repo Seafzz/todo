@@ -93,3 +93,7 @@ def view_profile(request):
 
 def home (request):
     return render(request, 'tasks/home.html')
+
+
+def logout_view(request):
+    
