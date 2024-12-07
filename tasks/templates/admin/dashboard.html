@@ -5,6 +5,6 @@
 <h1>Manage Tasks</h1>
 <form method="POST">
     {% csrf_token %}
-
-
+    {{ form|crispy }}
+    <button type="submit">Submit</button>
 </form>
