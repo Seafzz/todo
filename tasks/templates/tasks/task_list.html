@@ -16,7 +16,13 @@
             <small>Due: {{ task.due_date|date:"M d, Y" }}</small>
             {% endif %}
         </div>
-        <div>
+        <div> 
+            <form action="{% url 'toggle_task_complete' task.pk %}" method="post" style="display:inline;"> 
+                {% csrf_token %} 
+                <button type="submit" class="btn btn-sm {% if task.completed %}btn-success{% else %}btn-outline-success{% endif %}"> 
+                    {% if task.completed %}Completed{% else %}Mark as Completed{% endif %} 
+                </button> 
+            </form>
             <form action="{% url 'delete_task' task.pk %}" method="post" style="display:inline;">
                 {% csrf_token %}
                 <button type="submit" class="btn btn-danger btn-sm">Delete</button>
