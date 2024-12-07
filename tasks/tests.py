@@ -52,3 +52,9 @@ class TaskViewTests(TestCase):
 
     
 #Form Test
+
+class TaskFormTest(TestCase):
+    def setUp(self):
+        self.user = User.objects.create_user(username='testuser', password='testproject4')
+
+    
