@@ -1,17 +1,14 @@
 {% extends 'tasks/base.html' %}
 {% load crispy_forms_tags %}
-{% block title %} Manage Tasks {% endblock %}
+{% block title %} Admin Dashboard {% endblock %}
 {% block content %}
 
-<h1>Manage Tasks</h1>
-<form method="POST">
-    {% csrf_token %}
-    {{ form|crispy }}
-    <button type="submit">Submit</button>
-</form>
-<ul>
-    {% for task in tasks %}
-    <li> {{ task.title }} - {{ task.description }}</li>
-    {% endfor %}
-</ul>
+<h1>Admin Dashboard</h1>
+<div>
+    <h2>Statistics</h2>
+    <ul>
+        <li>Total Tasks: {{ total_tasks }}</li>
+        <li>Completed Tasks: {{ completed_tasks }}</li>
+    </ul>
+</div>
 {% endblock %}
