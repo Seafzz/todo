@@ -2,13 +2,14 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.conf import settings
 
+
 class Task(models.Model):
     PRIORITY_CHOICES = [
         ('L', 'Low'),
         ('U', 'Urgent'),
         ('A', 'Asap'),
     ]
-    CATEGORY_CHOICES =[
+    CATEGORY_CHOICES = [
         ('W', 'Work'),
         ('P', 'Personal'),
         ('O', 'Others'),
@@ -19,14 +20,18 @@ class Task(models.Model):
     completed = models.BooleanField(default=False)
     due_date = models.DateField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    priority = models.CharField(max_length=1, choices=PRIORITY_CHOICES, default='M')
-    category = models.CharField(max_length=1, choices=CATEGORY_CHOICES, default='O')
+    priority = models.CharField(
+        max_length=1, choices=PRIORITY_CHOICES, default='M')
+    category = models.CharField(
+        max_length=1, choices=CATEGORY_CHOICES, default='O')
 
     def __str__(self):
         return self.title
 
+
 class Profile(models.Model):
-    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    user = models.OneToOneField(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     bio = models.TextField(max_length=500, blank=True)
     location = models.CharField(max_length=30, blank=True)
     birth_date = models.DateField(null=True, blank=True)
