@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.test import TestCase
 from django.urls import reverse
 from .models import Task
@@ -10,10 +11,10 @@ class TaskModelTest(TestCase):
         self.task = Task.objects.create(
             title="Test Task", description="This is a test task", completed=False)
             
-            #Create user
+        #Create user
         self.user = user.objects.create_user(username='testuser', password='testproject4')
 
-            #login user
+        #login user
         self.client.login(username='testuser', password='testproject4')
 
     def tesk_task_creation(self):
@@ -22,11 +23,11 @@ class TaskModelTest(TestCase):
         self.assertFalse(self.task.completed)
 
     def test_string_representation(self):
-        self.assert_Equal(str(self.task), self.task.title)
+        self.assertEqual(str(self.task), self.task.title)
 
 
 class TaskViewTests(TestCase):
-    def setup(self):
+    def setUp(self):
         self.task = Task.objects.create(
             title="Test Task", description="This is a test task", completed=False)
 
@@ -34,14 +35,8 @@ class TaskViewTests(TestCase):
         self.client.login(username='testuser', password='testproject4')
         response = self.client.get(reverse('task_list'))
         self.assertEqual(response.status_code, 200)
-        self.assert_Contains(response, "Test Task")
+        self.assertContains(response, "Test Task")
         self.assertTemplateUsed(respone, 'task/task_list.html')
-
-    def test_task_detail_view(self):
-        response = self.client.get(reverse('task_list'))
-        self.assertEqual(response.status_code, 200)
-        self.asserContains(response, 'Test Task')
-        self.assertTemplateUsed(respone, 'tasks/task_list.html')
 
     def test_task_detail_view(self):
         self.client.login(username='testuser', password='testproject4')
