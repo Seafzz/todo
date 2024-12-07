@@ -3,6 +3,16 @@ from django.db import models
 from django.conf import settings
 
 class Task(models.Model):
+    PRIORITY_CHOICES = [
+        ('L', 'Low'),
+        ('U', 'Urgent'),
+        ('A', 'Asap'),
+    ]
+    CATEGORY_CHOICES =[
+        ('W', 'Work'),
+        ('P', 'Personal'),
+        ('O', 'Others'),
+    ]
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     description = models.TextField()
@@ -20,15 +30,3 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.user.username
-
-class Task(models.Model):
-    PRIORITY_CHOICES = [
-        ('L', 'Low'),
-        ('U', 'Urgent'),
-        ('A', 'Asap'),
-    ]
-    CATEGORY_CHOICES =[
-        ('W', 'Work'),
-        ('P', 'Personal'),
-        ('O', 'Others'),
-    ]
