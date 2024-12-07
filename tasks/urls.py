@@ -12,5 +12,6 @@ urlpatterns = [
     path('profile/edit/', views.update_profile, name='update_profile'),
     path('signup/', views.signup, name='signup'),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('logout/', views.logout_view, name='logout'),
 ]
 
