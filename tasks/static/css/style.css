@@ -80,3 +80,7 @@ body {
     color: #6c757d;
     transition: color 0.3s;
 }
+
+.footer .list-inline-item a:hoover{
+    color: #343a40;
+}
