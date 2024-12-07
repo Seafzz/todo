@@ -75,3 +75,8 @@ body {
 .footer .list-inline-item {
     margin: 0 10px;
 }
+
+.footer .list-inline-item a{
+    color: #6c757d;
+    transition: color 0.3s;
+}
