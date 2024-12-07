@@ -22,4 +22,9 @@ class Profile(models.Model):
         return self.user.username
 
 class Task(models.Model):
+    PRIORITY_CHOICES = [
+        ('L', 'Low'),
+        ('U', 'Urgent'),
+        ('A', 'Asap'),
+    ]
     
