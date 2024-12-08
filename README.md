@@ -11,8 +11,7 @@
 8. [Authentication and Authorization](#authentication-and-authorization)
 9. [Testing](#testing)
 10. [Deployment](#deployment)
-11. [Contributing](#contributing)
-12. [Acknowledgements](#acknowledgements)
+11. [Acknowledgements](#acknowledgements)
 
 
 ## Project Overview
@@ -28,17 +27,17 @@ The app includes user authentication, role-based access control and responsive d
 - Notifications for task updates
 
 ## Technologies Used
-- **Programing Languages**: Python
+- **Programming Languages**: Python
 - **Framework**: Django
 - **Frontend**: Bootstrap, HTML, CSS, JavaScript
-- **Database**: SQlite (development), PostgresSQL (production)
+- **Database**: SQlite (development), PostgreSQL (production)
 - **Deployment**: Heroku
 - **Version Control**: Git, Github
 - **IDE**: Visual Studio Code, GitHub
-- **AI Assistance**: Co-Pilot
+- **AI Assistance**: VS-Code - Copilot
 
 ## Setup and Installation
-1. **Clone the repository from Github**: 
+1. **Clone the repository from GitHub**: 
 git clone https://github.com/Seafzz/todo
 2. Install the required packages
 pip install -r requirements.txt
@@ -190,4 +189,14 @@ if you don't already have one, [sign up for a Heroku account](https://signup.her
 
 6. **Access Your Application**:
 - Once the deployment is complete, you can open your application by clicking on the "Open app" button.
+
+## Acknowledgements
+- **Friends**: For their support and help with live testing.
+- **Studentcare**: Who gave me more time to finish this project due to the unforseen events. 
+- **Cloud with Django**: https://www.youtube.com/watch?v=sHieKUtwQcM&ab_channel=CloudWithDjango (For inspiration and specificlly CRUD)
+- **PrgrammingWIthHarry**: https://www.youtube.com/watch?v=bMNdcMSe3pc&ab_channel=ProgrammingWithHarry (Inspiration good base to start working on this project)
+- **AI Assistance by Copilot**: For providing guidance and support throughout the development with code bits and suggestions.
+
+
+
 
