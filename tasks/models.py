@@ -38,3 +38,8 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.user.username
+
+def is_member_of_group(self_name):
+    return self.groups.filter(name=group_name).exists()
+
+User.add_to_class("is_member_of_group", is_member_of_group)
