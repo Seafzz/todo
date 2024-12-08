@@ -54,4 +54,13 @@ python manage.py migrate
 python manage.py createsuperuser
 6. start the development server:
 python manage.py runserver
-7. Your todo list should now run locally! Navigate to http://localhost:8000 or check your IDE if you swaped ports.
+7. Your todo list should now run locally! Navigate to http://localhost:8000
+
+## Usage
+1. Navigate to http://Localhost:8000 in your webbrowser
+2. Sign up for a new account or log in with your credentials.
+3. Use the navigation bar to acces the task list, create new tasks and manage your profile
+4. Admin users can access the admin dashboard for additional functionalities. 
+
+## User Stories
+
