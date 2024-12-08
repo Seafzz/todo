@@ -191,7 +191,9 @@ Passed without errors.
 
 ### Python Code Validation
 - **PEP8 Compliance**: Check python code compliance with CI Python Linter
-- **Unit Tests**:
+- **Unit Tests**: All unit tests passed successfully.
+
+![proof of validation](/assets/python_vali.png)
 
 ## Deployment
 
