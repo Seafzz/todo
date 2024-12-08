@@ -74,3 +74,35 @@ User stories were documented and managed using Github Project board.
 
 The project was planned and implemented using Agile methodology. To provide a comprehensive overview, some of the issues and tasks have been documented retrospectively to reflect the actual development process.
 
+
+## Data Models
+
+### User
+- **Fields**:
+- **username**: The unique username for the user.  
+- **password**: The user's hashed password. 
+- **profile**: One-to-one relationship with the Profile model.
+
+### Profile
+
+Stores additional information about the
+
+- **Fields**: 
+- **user**: The related user. 
+- **bio**: A short biography of the user. 
+- **location**: The user's location. 
+- **birth_date**: The user's birth date.
+
+### Task
+
+Represents a task that a user can create, edit, and manage.
+
+- **Fields**: 
+- **user**: The user who owns the task. 
+- **title**: The title of the task. 
+- **description**: A detailed description of the task. 
+- **completed**: A boolean indicating if the task is completed. 
+- **due_date**: The due date for the task. 
+- **created_at**: The timestamp when the task was created. 
+- **priority**: The priority of the task (Low, Urgent, Asap). 
+- **category**: The category of the task (Work, Personal, Others).
