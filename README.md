@@ -176,6 +176,23 @@ Automated tests have been implemented to ensure the functionality of  the applic
 Manual testing has been conducted to verify the functionality of the application. For detailed manual testing results and evidence, refer to the [manual_test_results.md](manual_test_results.md) file.
 
 
+## Validation
+
+- **HTML Validation**: Used the [W3C Markup Validation Service](https://validator.w3.org/) Validate HTML code.
+Passed without errors.
+- **CSS Validation**: Used the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) Validate CSS code.
+<p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+</p>
+
+### Python Code Validation
+- **PEP8 Compliance**: Check python code compliance with CI Python Linter
+- **Unit Tests**:
+
 ## Deployment
 
 ### Deploying to Heroku
