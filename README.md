@@ -38,3 +38,20 @@ The app includes user authentication, role-based access control and responsive d
 - **Version Control**: Git, Github
 - **IDE**: Visual Studio Code, GitHub
 - **AI Assistance**: Co-Pilot
+
+## Setup and Installation
+1. **Clone the repository from Github**: 
+git clone https://github.com/Seafzz/todo
+2. Install the required packages
+pip install -r requirements.txt
+3. create a .env file in the project directory and add your configurations
+SECRET_KEY=your_secret_key
+DATABASE_URL=your_database_url
+DEBUG=False
+4. Run the migrations to set up your database:
+python manage.py migrate
+5. Create a superuser for admin access (Optional, but recommended)
+python manage.py createsuperuser
+6. start the development server:
+python manage.py runserver
+7. Your todo list should now run locally! Navigate to http://localhost:8000 or check your IDE if you swaped ports.
