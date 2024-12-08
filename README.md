@@ -28,3 +28,13 @@ The app includes user authentication, role-based access control and responsive d
 - Profile management
 - Responsive design
 - Notifications for task updates
+
+## Technologies Used
+- **Programing Languages**: Python
+- **Framework**: Django
+- **Frontend**: Bootstrap, HTML, CSS, JavaScript
+- **Database**: SQlite (development), PostgresSQL (production)
+- **Deployment**: Heroku
+- **Version Control**: Git, Github
+- **IDE**: Visual Studio Code, GitHub
+- **AI Assistance**: Co-Pilot
