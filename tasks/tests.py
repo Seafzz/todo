@@ -6,16 +6,20 @@ from .forms import TaskForm
 
 # Create your tests here.
 
-#Model Tests
+# Model Tests
+
+
 class TaskModelTest(TestCase):
     def setUp(self):
-        #create user
-        self.user = User.objects.create_user(username='testuser', password='testproject4')
-        
-        self.task = Task.objects.create( 
-            title="Test Task", description="This is a test task", completed=False, user=self.user)
+        # create user
+        self.user = User.objects.create_user(
+            username='testuser', password='testproject4')
 
-        #login user
+        self.task = Task.objects.create(
+            title="Test Task", description="This is a test task",
+            completed=False, user=self.user)
+
+        # login user
         self.client.login(username='testuser', password='testproject4')
 
     def test_task_creation(self):
@@ -28,15 +32,18 @@ class TaskModelTest(TestCase):
         self.assertEqual(str(self.task), self.task.title)
 
 
-#Views Tests
+# Views Tests
 class TaskViewTests(TestCase):
     def setUp(self):
-        # Create user 
-        self.user = User.objects.create_user(username='testuser', password='testproject4')
+        # Create user
+        self.user = User.objects.create_user(
+            username='testuser', password='testproject4')
 
-        self.task = Task.objects.create( title="Test Task", description="This is a test task", completed=False, user=self.user)
+        self.task = Task.objects.create(
+            title="Test Task", description="This is a test task",
+            completed=False, user=self.user)
 
-        # Login user 
+        # Login user
         self.client.login(username='testuser', password='testproject4')
 
     def test_task_list_view(self):
@@ -51,28 +58,29 @@ class TaskViewTests(TestCase):
         self.assertContains(response, "Test Task")
         self.assertTemplateUsed(response, 'tasks/task_detail.html')
 
-    
-#Form Test
+
+# Form Test
 
 class TaskFormTest(TestCase):
     def setUp(self):
-        self.user = User.objects.create_user(username='testuser', password='testproject4')
+        self.user = User.objects.create_user(
+            username='testuser', password='testproject4')
 
     def test_valid_form(self):
-        data = { 
+        data = {
             'title': 'Test Task',
             'description': 'This is a test task',
-            'completed': False, 
+            'completed': False,
             'user': self.user.id,
             'priority': 'L',
             'priority': 'U',
             'priority': 'A',
-            'category': 'W', 
+            'category': 'W',
             'category': 'P',
             'category': 'O',
-        }        
+        }
         form = TaskForm(data=data)
-        print(form.errors) #Debugg
+        print(form.errors)  # Debugg
         self.assertTrue(form.is_valid())
 
     def test_invalid_form(self):
