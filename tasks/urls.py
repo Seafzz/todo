@@ -2,9 +2,6 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    # Admin URLs path
-    path('custom_admin/dashboard/', views.admin_dashboard_view, name='admin_dashboard'), 
-
     path('', views.home, name='home'),
     path('tasks/', views.task_list, name='task_list'),
     path('create/', views.create_task, name='create_task'),
