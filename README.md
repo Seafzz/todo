@@ -10,11 +10,14 @@
 4. [Setup and Installation](#setup-and-installation)
 5. [Usage](#usage)
 6. [Agile Methodology](#agile-methodology)
-7. [Data Models](#data-models)
-8. [Authentication and Authorization](#authentication-and-authorization)
-9. [Testing](#testing)
-10. [Deployment](#deployment)
-11. [Acknowledgements](#acknowledgements)
+7. [Mockups](#mockups)
+8. [Data Models](#data-models)
+9. [Authentication and Authorization](#authentication-and-authorization)
+10. [Testing](#testing)
+11. [Validation](#validation)
+12. [Deployment](#deployment)
+13. [Acknowledgements](#acknowledgements)
+
 
 
 ## Project Overview
