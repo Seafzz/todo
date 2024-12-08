@@ -1,6 +1,6 @@
 # Todo List Application
 
-![App Screenshot](assets/fronpicture.png)
+![App Screenshot](todo/assets/fronpicture.png)
 
 
 ## Table of Contents
