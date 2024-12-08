@@ -118,9 +118,9 @@ User authentication ensures that only registered users can log in and access the
 
 ### Authorization
 
-Authorization controls what authenticated users are allowed to do within the application. Role-based acces control (RBAC)
--**Standard Users**: Can create, edit and delete their own update their profile; and view their task list.
--**Admins**: Have additional permissions, view task statistics, and access the admin dashboard.
+Authorization controls what authenticated users are allowed to do within the application. Role-based access control (RBAC)
+- **Standard Users**: Can create, edit, and delete their own tasks, update their profile, and view their task list.
+- **Admins**: Have additional permissions, view task statistics, and access the admin dashboard.
 
 
 ### Security Measures
