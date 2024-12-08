@@ -1,6 +1,6 @@
 # Todo List Application
 
-![App Screenshot](todo/assets/fronpicture.png)
+![App Screenshot](/assets/fronpicture.png)
 
 
 ## Table of Contents
@@ -74,7 +74,21 @@ User stories were documented and managed using Github Project board.
   - In Progress 
   - Done
 
+
 The project was planned and implemented using Agile methodology. To provide a comprehensive overview, some of the issues and tasks have been documented retrospectively to reflect the actual development process.
+
+### Mockups
+Here are some of the todo List application
+
+Here are some mockups of the Todo List Application:
+
+### Create Task Mockup
+![Create Task Mockup](assets/create_task_mockup.png)
+*This mockup shows the interface for creating a new task, including fields for the task title, description, due date, priority, and category.*
+
+### Homepage Mockup
+![Homepage Mockup](assets/homepage_mockup.png)
+*This mockup showcases the homepage of the application, where users can see a list of their tasks, filter tasks by category, and access other features like profile management.*
 
 
 ## Data Models
