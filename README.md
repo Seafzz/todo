@@ -13,8 +13,7 @@
 10. [Testing](#testing)
 11. [Deployment](#deployment)
 12. [Contributing](#contributing)
-13. [License](#license)
-14. [Acknowledgements](#acknowledgements)
+13. [Acknowledgements](#acknowledgements)
 
 
 ## Project Overview
@@ -63,4 +62,7 @@ python manage.py runserver
 4. Admin users can access the admin dashboard for additional functionalities. 
 
 ## User Stories
-
+1. As a new user, I want to sign up without my email address, so I can create an account and start managing my tasks.
+2. As a user, I want to create, edit, and delete tasks, so I can manage my to-do list effectively and keep track of my progress.
+3. As a user, I want to categorize my tasks by priority and category, so I can organize my tasks better and focus on what’s important.
+4. As an admin, I want to access the admin dashboard, so I can monitor task completion rates, and ensure the system runs smoothly
