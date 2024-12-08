@@ -1,1 +1,14 @@
+Creating test database for alias 'default'...
+System check identified some issues:
+
+WARNINGS:
+?: (staticfiles.W004) The directory '/workspace/todo/static' in the STATICFILES_DIRS setting does not exist.
+
+System check identified 1 issue (0 silenced).
+......
+----------------------------------------------------------------------
+Ran 6 tests in 4.649s
+
+OK
+
 

@@ -149,3 +149,12 @@ tasks = Task.objects.filter(user=request.user).order_by('due_date')
     completed_tasks = Task.objects.filter(completed=True).count()
     return render(request, 'admin/dashboard.html')
     ```
+
+## Testing
+
+### Automated Testing
+
+Automated tests have been implemented to ensure the functionality of  the application. All tests have passed successfully. For detailed test results, refer to the [test_results.txt](test_results.txt) file.
+
+### Manual Testing
+Manual testing has been conducted to verify the functionality of the application. For detailed manual testing results and evidence, refer to the [manual_test_results.md](manual_test_results.md) file.
