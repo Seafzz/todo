@@ -21,3 +21,10 @@
 The Todo List Application is a full-stack web application built using Django MVC framework. It allows users to manage their tasks efficiently by creating, editing, and deleting tasks.
 The app includes user authentication, role-based access control and responsive design to ensure a seamless experience across devices.
 
+## Features
+- User authentication (signup, login, logout)
+- Role-based access control (admin dashboard)
+- Task management (CRUD) (Create, read, update, delete tasks)
+- Profile management
+- Responsive design
+- Notifications for task updates
