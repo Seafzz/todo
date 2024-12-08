@@ -30,7 +30,7 @@ The app includes user authentication, role-based access control and responsive d
 - Notifications for task updates
 
 ## Technologies Used
-- **Programming Languages**: Python
+- **Programming Languages**: Python, JavaScript
 - **Framework**: Django
 - **Frontend**: Bootstrap, HTML, CSS, JavaScript
 - **Database**: SQlite (development), PostgreSQL (production)
@@ -38,6 +38,9 @@ The app includes user authentication, role-based access control and responsive d
 - **Version Control**: Git, Github
 - **IDE**: Visual Studio Code, GitHub
 - **AI Assistance**: VS-Code - Copilot
+
+### JavaScript Note
+A significant portion of the JavaScript in the project comes from third-party and static files collected during the "collectstatic" process. These includes essential front-end dependencies such as Bootstrap and jQuery.
 
 ## Setup and Installation
 1. **Clone the repository from GitHub**: 
