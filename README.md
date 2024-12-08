@@ -6,14 +6,13 @@
 3. [Technologies Used](#technologies-used)
 4. [Setup and Installation](#setup-and-installation)
 5. [Usage](#usage)
-6. [User Stories](#user-stories)
-7. [Agile Methodology](#agile-methodology)
-8. [Data Models](#data-models)
-9. [Authentication and Authorization](#authentication-and-authorization)
-10. [Testing](#testing)
-11. [Deployment](#deployment)
-12. [Contributing](#contributing)
-13. [Acknowledgements](#acknowledgements)
+6. [Agile Methodology](#agile-methodology)
+7. [Data Models](#data-models)
+8. [Authentication and Authorization](#authentication-and-authorization)
+9. [Testing](#testing)
+10. [Deployment](#deployment)
+11. [Contributing](#contributing)
+12. [Acknowledgements](#acknowledgements)
 
 
 ## Project Overview
@@ -61,8 +60,17 @@ python manage.py runserver
 3. Use the navigation bar to acces the task list, create new tasks and manage your profile
 4. Admin users can access the admin dashboard for additional functionalities. 
 
-## User Stories
-1. As a new user, I want to sign up without my email address, so I can create an account and start managing my tasks.
-2. As a user, I want to create, edit, and delete tasks, so I can manage my to-do list effectively and keep track of my progress.
-3. As a user, I want to categorize my tasks by priority and category, so I can organize my tasks better and focus on what’s important.
-4. As an admin, I want to access the admin dashboard, so I can monitor task completion rates, and ensure the system runs smoothly
+
+
+## Agile Methodology
+The project was planned and implemented using Agile methodology.
+User stories were documented and managed using Github Project board.
+
+ #### Project Board
+  - The project board was divided into columns such as "To Do", "In Progress", and "Done" to visually track the progress of tasks. - **Example Columns**: 
+  - To Do 
+  - In Progress 
+  - Done
+
+The project was planned and implemented using Agile methodology. To provide a comprehensive overview, some of the issues and tasks have been documented retrospectively to reflect the actual development process.
+

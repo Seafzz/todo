@@ -2,6 +2,8 @@ from django.contrib.auth.models import User, Group
 from django.db import models
 from django.conf import settings
 
+# Task model to store task-related information
+
 
 class Task(models.Model):
     PRIORITY_CHOICES = [
@@ -28,6 +30,8 @@ class Task(models.Model):
     def __str__(self):
         return self.title
 
+# Profile model to store user profile information
+
 
 class Profile(models.Model):
     user = models.OneToOneField(
@@ -38,8 +42,11 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.user.username
+# Check if the user is a member of a specific group
+
 
 def is_member_of_group(self_name):
     return self.groups.filter(name=group_name).exists()
+
 
 User.add_to_class("is_member_of_group", is_member_of_group)
