@@ -26,10 +26,14 @@
                     <a class="nav-link" href="{% url 'create_task' %}"><i class="fas fa-plus-circle"></i> Create Task</a>
                 </li>
                 <!-- Admin Link: Only visible to admin users -->
-                {% if user.is_authenticated and user.is_member_of_group('admin') %}
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'admin_dashboard' %}"><i class="fas fa-user-shield"></i> Admin Dashboard</a>
-                </li>
+                {% if user.is_authenticated %}
+                    {% for group in user.groups.all %}
+                        {% if group.name == "admin" %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'admin_dashboard' %}"><i class="fas fa-user-shield"></i> Admin Dashboard</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
                 {% endif %}
             </ul>
             <ul class="navbar-nav ml-auto">
@@ -66,4 +70,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
-
