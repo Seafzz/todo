@@ -158,3 +158,36 @@ Automated tests have been implemented to ensure the functionality of  the applic
 
 ### Manual Testing
 Manual testing has been conducted to verify the functionality of the application. For detailed manual testing results and evidence, refer to the [manual_test_results.md](manual_test_results.md) file.
+
+
+## Deployment
+
+### Deploying to Heroku
+
+1. **Create a Heroku Account**:
+if you don't already have one, [sign up for a Heroku account](https://signup.heroku.com/).
+
+2. **Create a New Heroku App**:
+- Log in to your Heroku account.
+- Click on the "New" button in the top right corner and select "Create new app".
+- Enter a unique app name and choose your region.
+- Click "Create app".
+
+3. **Set up Enviroment Variable**:
+- Navigate to the "Settings" tab of your newly created app.
+- Click on "Reveal Config Vars" in the Config Vars section.
+- Add the necessary enviroment variables ('SECRET_KEY, 'DATABASE_URL' DEBUG=FALSE').
+
+4. **Connect to Github**:
+- Navigate to the "Deploy" tab.
+- In the "Deployment method" section, select "Github".
+- Authenticate with Github if you haven't already.
+- Search for your repository and connect if to your Heroku app.
+
+5. **Deploy the Application**:
+- In the "Manual Deploy" section, select the branch you want to deploy (Main)
+- Click on "Deploy Branch".
+
+6. **Access Your Application**:
+- Once the deployment is complete, you can open your application by clicking on the "Open app" button.
+
