@@ -88,8 +88,8 @@ body {
 
 
 /* Media Query */
-
-@Media (max-width 480px){
+/*Mobile*/
+@Media (max-width: 480px) {
     .container { 
         padding: 10px; 
     } 
@@ -103,5 +103,6 @@ body {
         font-size: 20px; 
     } 
 }
+
 
 
