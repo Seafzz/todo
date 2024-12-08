@@ -4,16 +4,16 @@
 
 | Test Case Description                 |   Expected Result                         | Actual Result                          |
 | ------------------------------------  |  ---------------------------------------  | ---------------------------------------|
-| Veryify user can create a task        |  Task is created and visible in task list | Task created successfully              |
+| Verify user can create a task         |  Task is created and visible in task list | Task created successfully              |
 | Verify user can edit a task           |  Task details are updated                 | Task edited successfully               |
-| Verify user can delete a task         |  Task deleted successfully                | Task deleted succesfully
-| User can make a task as completed     |  Task will be marked complete sucessfully | Task was marked compelte successfully
-| User signup                           |  User account is created and user is redirected to Tasks | User account was created succesfully and redirected to tasks
-| User Login                            |  User is logged in and redirected to the homepage | User was logged in and redirected to the homepage
-| Profile Update                        |  Profile Details are updated                      | Profile details was updated successfully                                      
-| Admin dashboard Access                |  Admin dashboard is accesible and shows user statistic |
-| Role-based Acces control              |  Normal user will neither have the possibility to see the dashboard icon or use url to acces admin.dashboard | Admin dashboard was not vissible| Normal user couldnt see the dashboard icon or use the url to get acces to the dashboard.
-| Form Validation                       |  Appropriate messages are displayed. | Appropiate message was displayed, but shown in swedish during tests |
+| Verify user can delete a task         |  Task is removed from the task list       | Task deleted successfully              |
+| User can mark a task as completed     |  Task will be marked complete successfully | Task was marked successfully           |
+| User signup                           |  User account is created and user is redirected to Tasks | User account was created successfully and redirected to tasks |
+| User login                            |  User is logged in and redirected to the homepage | User was logged in and redirected to the homepage |
+| Profile update                        |  Profile details are updated              | Profile details were updated successfully |
+| Admin dashboard access                |  Admin dashboard is accessible and shows user statistics | Admin dashboard accessed successfully  |
+| Role-based access control             |  Normal user will neither have the possibility to see the dashboard icon nor use URL to access admin dashboard | Normal user couldn't see the dashboard icon or use the URL to get access to the dashboard |
+| Form validation                       |  Appropriate messages are displayed       | Appropriate messages were displayed, but shown in Swedish during tests |
 
 ## Test Evidence
 
@@ -43,4 +43,3 @@
 
 ### Form Validation
 - ![Form Validation](manual_test_evidence/form_validation.png)
-
