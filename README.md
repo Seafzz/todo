@@ -106,3 +106,46 @@ Represents a task that a user can create, edit, and manage.
 - **created_at**: The timestamp when the task was created. 
 - **priority**: The priority of the task (Low, Urgent, Asap). 
 - **category**: The category of the task (Work, Personal, Others).
+
+## Authentication and Authorization
+
+### Authentication
+
+User authentication ensures that only registered users can log in and access their account securely.
+
+- **User Signup**: Users can create a new account by providing a username and password.
+- **User Login**: Users can log in using their credentials to access their tasks and profile.
+- **User Logout**: Users can log out to securely end their session.
+
+### Authorization
+
+Authorization controls what authenticated users are allowed to do within the application. Role-based acces control (RBAC)
+-**Standard Users**: Can create, edit and delete their own update their profile; and view their task list.
+-**Admins**: Have additional permissions, view task statistics, and access the admin dashboard.
+
+
+### Security Measures
+- **Password Hasing**: User password are hashed before being stored in the database
+
+
+The application uses decorators such as `@login_required` and `@user_passes_test` to enforce authentication and authorization at the view level.
+
+#### Example Code Snippets
+
+- **Login Required Decorator**: 
+```python 
+@login_required def task_list(request): 
+tasks = Task.objects.filter(user=request.user).order_by('due_date')
+ return render(request, 'tasks/task_list.html', {'tasks': tasks}) 
+ ```
+- **User Passes Test Decorator for Admin Access**:
+    ```python
+    def is_admin(user):
+        return user.is_authenticated and user.groups.filter(name='admin').exists()
+
+    @user_passes_test(is_admin) 
+    def admin_dashboard_view(request)
+    total_tasks = Task.objects.count()
+    completed_tasks = Task.objects.filter(completed=True).count()
+    return render(request, 'admin/dashboard.html')
+    ```
