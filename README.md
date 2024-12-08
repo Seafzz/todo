@@ -1,6 +1,6 @@
 # Todo List Application
 
-![App Screenshot](assets/frontpicture.png)
+![App Screenshot](assets/fronpicture.png)
 
 
 ## Table of Contents
@@ -127,7 +127,7 @@ Authorization controls what authenticated users are allowed to do within the app
 
 
 ### Security Measures
-- **Password Hasing**: User password are hashed before being stored in the database
+- **Password Hashing**: User password are hashed before being stored in the database
 
 
 The application uses decorators such as `@login_required` and `@user_passes_test` to enforce authentication and authorization at the view level.
@@ -198,7 +198,7 @@ if you don't already have one, [sign up for a Heroku account](https://signup.her
 - **Studentcare**: Who gave me more time to finish this project due to the unforseen events. 
 - **Cloud with Django**: https://www.youtube.com/watch?v=sHieKUtwQcM&ab_channel=CloudWithDjango (For inspiration and specificlly CRUD)
 - **PrgrammingWIthHarry**: https://www.youtube.com/watch?v=bMNdcMSe3pc&ab_channel=ProgrammingWithHarry (Inspiration good base to start working on this project)
-**AI Assistance by Copilot**: For providing guidance and support throughout the development with code bits and suggestions.
+- **AI Assistance by Copilot**: For providing guidance and support throughout the development with code bits and suggestions.
 
 
 
